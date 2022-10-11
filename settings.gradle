@@ -1,0 +1,28 @@
+pluginManagement {
+    repositories {
+        gradlePluginPortal()
+        google()
+        mavenCentral()
+    }
+}
+dependencyResolutionManagement {
+    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+    repositories {
+        google()
+        mavenCentral()
+        maven {
+            credentials {
+                username "sdk"
+                password "sdk123456"
+            }
+            url "http://www.valifystage.com/artifactory/libs-release/"
+            allowInsecureProtocol = true
+        }
+        maven {
+            url "http://jitpack.io"
+            allowInsecureProtocol = true
+        }
+    }
+}
+rootProject.name = "My Application"
+include ':app'
